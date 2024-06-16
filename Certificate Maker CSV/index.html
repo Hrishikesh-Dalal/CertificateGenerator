@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your external CSS file -->
+</head>
+<body>
+    <header>
+        <h2>Generate Certificates</h2>
+    </header>
+    <main>
+        <div class="form-container">
+            <Label>CSV</Label>
+            <input type="file" id="csvFileInput" accept=".csv" class="file-input">
+            <button onclick="generateCertificates()" class="generate-button">Generate Certificates</button>
+        </div>
+    </main>
+    <!-- <footer>
+        <p>&copy; Hrishikesh Dalal | Contact: <a href="mailto:1010hrishikesh@gmail.com">1010hrishikesh@gmail.com</a></p>
+    </footer> -->
+    <script src="certificate.js"></script>
+</body>
+</html>

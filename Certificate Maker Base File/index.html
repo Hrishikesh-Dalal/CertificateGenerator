@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your external CSS file -->
+</head>
+<body>
+    <header>
+        <h2>Generate Certificate</h2>
+    </header>
+    <main>
+        <div class="form-container">
+            <input type="text" id="nameInput" placeholder="Enter Name" class="text-input">
+            <div class="form-group">
+                <label for="alignX">Align X:</label>
+                <select id="alignX" onchange="toggleManualInput('alignX', 'manualXInput')" class="select-input">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                    <option value="manual">Manual</option>
+                </select>
+                <input type="number" id="manualXInput" placeholder="Manual X" style="display:none;" class="number-input">
+            </div>
+            <div class="form-group">
+                <label for="alignY">Align Y:</label>
+                <select id="alignY" onchange="toggleManualInput('alignY', 'manualYInput')" class="select-input">
+                    <option value="top">Top</option>
+                    <option value="middle">Middle</option>
+                    <option value="bottom">Bottom</option>
+                    <option value="manual">Manual</option>
+                </select>
+                <input type="number" id="manualYInput" placeholder="Manual Y" style="display:none;" class="number-input">
+            </div>
+            <div class="form-group">
+                <label for="fontSize">Font Size:</label>
+                <input type="number" id="fontSize" placeholder="Enter Font Size" class="number-input">
+            </div>
+            <div class="form-group">
+                <label for="fontType">Font Type:</label>
+                <select id="fontType" class="select-input">
+                    <option value="Courier">Courier</option>
+                    <option value="CourierBold">Courier Bold</option>
+                    <option value="CourierBoldOblique">Courier Bold Oblique</option>
+                    <option value="CourierOblique">Courier Oblique</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="HelveticaBold">Helvetica Bold</option>
+                    <option value="HelveticaBoldOblique">Helvetica Bold Oblique</option>
+                    <option value="HelveticaOblique">Helvetica Oblique</option>
+                    <option value="TimesRoman">Times Roman</option>
+                    <option value="TimesRomanBold">Times Roman Bold</option>
+                    <option value="TimesRomanBoldItalic">Times Roman Bold Italic</option>
+                    <option value="TimesRomanItalic">Times Roman Italic</option>
+                    <option value="ZapfDingbats">Zapf Dingbats</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="templateInput">PDF Template:</label>
+                <input type="file" id="templateInput" accept=".pdf" class="file-input">
+            </div>
+            <div class="form-group">
+                <button onclick="generateCertificate()" class="generate-button">Generate</button>
+            </div>
+        </div>
+    </main>
+    <!-- <footer>
+        <p>&copy; Hrishikesh Dalal | Contact: <a href="mailto:1010hrishikesh@gmail.com">1010hrishikesh@gmail.com</a></p>
+    </footer> -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="certificate.js"></script>
+</body>
+</html>

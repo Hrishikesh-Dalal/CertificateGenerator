@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link your external CSS file -->
+</head>
+<body>
+    <header>
+        <h2>Generate Certificate</h2>
+    </header>
+    <main class="container">
+        <div class="form-container">
+            <input type="text" id="nameInput" placeholder="Enter Name" class="text-input">
+            <button onclick="generateCertificate()" class="generate-button">Generate</button>
+        </div>
+    </main>
+    <!-- <footer>
+        <p>&copy; Your Name | Contact: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </footer> -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="certificate.js"></script>
+</body>
+</html>
